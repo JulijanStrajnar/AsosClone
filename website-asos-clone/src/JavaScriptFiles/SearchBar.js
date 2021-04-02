@@ -31,9 +31,9 @@ export class SearchBar extends React.Component {
 
     onDeFocusInputField(e) {
         var shouldShowCloseTemp;
-        if(e.target.value.length > 0){
-            shouldShowCloseTemp = "";
-        } else shouldShowCloseTemp = "hidde";
+        if(this.state.inputText == ""){
+            shouldShowCloseTemp = "hidden";
+        } else shouldShowCloseTemp = "";
 
         this.setState({
             focusInputFieldClassName: "animationFadeOut",
